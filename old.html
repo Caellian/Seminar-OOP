@@ -22,8 +22,8 @@
     </style>
   </head>
   <body>
-    <layout src="part/layoutOld.html" menu="part/menu.html">
-      <p>Ovo je stari, odbačen dizajn web stranice. Previše je asocirao na program za preled dokumenta umjesto stranice.</p>
+    <layout src="part/layoutOld.html" menu="part/sidebar.html">
+      <p>Ovo je stari, odbačen dizajn web stranice. Previše je asocirao na program za pregled dokumenta umjesto stranice.</p>
     </layout>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -31,6 +31,19 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
     <script src="./script/parallax.js"></script>
-    <script src="./script/layout.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('layout').each(function() {
+          var content = $(this).clone();
+          $(this).empty();
+
+          $(this).load($(this).attr('src'), function() {
+            $(this).find('#page-title h1').append($(this).attr('title'))
+            $(this).find('#sidebar-nav').load($(this).attr('menu'))
+            content.appendTo('#content');
+          });
+        });
+      });
+    </script>
   </body>
 </html>
