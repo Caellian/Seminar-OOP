@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="hr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Tin Svagelj">
+
+    <title>Objektni programski jezici</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/layout.css">
+
+    <style media="screen">
+      #content p {
+        text-align: center;
+      }
+
+      #content h1, #content h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <layout src="part/layout.html" title="Objektni programski jezici" menu="part/menu.html">
+      <p style="height:200px;">
+        <strong>
+          SVEUČILIŠTE U RIJECI<br>
+          <a href="http://inf.uniri.hr">ODJEL ZA INFORMATIKU</a><br>
+          Preddiplomski studij informatike
+        </strong>
+      </p>
+
+      <h2>Seminarski rad iz kolegija</h2>
+      <h2>OSNOVE INFORMATIKE 1</h2>
+      <h1>OBJEKTNI PROGRAMSKI JEZICI</h1>
+
+      <p><strong>Autor:</strong> <a href="mailto:tin.svagelj.email@gmail.com">Tin Švagelj</a> </p>
+    </layout>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="./script/parallax.js"></script>
+    <script src="./script/layout.js"></script>
+
+    <script type="text/javascript">
+      $(document).keypress(function(e){
+        var checkWebkitandIE=(e.which==26 ? 1 : 0);
+        var checkMoz=(e.which==111 && e.ctrlKey ? 1 : 0 && e.altKey ? 1 : 0 );
+
+        if (checkWebkitandIE || checkMoz) {
+          location.replace("old.html");
+        }
+      });
+    </script>
+  </body>
+</html>

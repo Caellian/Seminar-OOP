@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Tin Svagelj">
+
+    <title>OOP - Enkapsulacija i kompozicija</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/layout.css">
+
+    <style>
+      #content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      #content p {
+        text-align: justify;
+        text-indent: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <layout src="part/layout.html" title="Enkapsulacija i kompozicija" menu="part/menu.html">
+      <section>
+        <h3>Enkapsulacija</h3>
+        <p>
+          Enkapsulacija je koncept koji povezuje podatke i funkcije koje pripadaju objektima u jednu cjelinu te ako nije drukčije definirano, kod koji ne pripada toj cjelini im ne može pristupiti ili ih izmijeniti. Skoro svi objektni jezici dozvoljavaju mijenjanje razine pristupa varijablama objekata uporabom ključnih riječi poput:
+
+          <ul>
+            <li>
+              <strong>private</strong> koja dozvoljava samo funkcijama koje pripadaju objektu pristup varijabli,
+            </li>
+            <li>
+              <strong>public</strong> koja dozvoljava svim funkcijama u kodu pristup varijabli i
+            </li>
+            <li>
+              <strong>protected</strong> koja dozvoljava funkcijama koje pripadaju objektu ili čije klase nasljeđuju tj. proširavaju ili implementiraju klasu kojoj pripada varijabla objekta.
+            </li>
+          </ul>
+        </p>
+      </section>
+
+      <section>
+        <h3>Kompozicija</h3>
+        <p>
+          Objekti mogu sadržavati druge objekte u varijablama instanca što se zove kompozicija objekata (engl. object composition). Kompozicija objekata se koristi za izražavanje svojstava objekata koja zahtijevaju kompliciraniju strukturu nemoguću ili znatno kompliciraniju za izraziti uporabom podataka primitivnog tipa (engl. primitives) poput brojeva.
+        </p>
+      </section>
+    </layout>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="./script/parallax.js"></script>
+    <script src="./script/layout.js"></script>
+  </body>
+</html>

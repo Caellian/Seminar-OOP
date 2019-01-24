@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Tin Svagelj">
+
+    <title>OOP - Ostale značajke objektnih jezika</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/layout.css">
+
+    <style>
+      #content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      #content p {
+        text-align: justify;
+        text-indent: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <layout src="part/layout.html" title="Ostale značajke objektnih jezika" menu="part/menu.html">
+      <section>
+        <h3>Dinamički pozivi</h3>
+        <p>
+          Pri pozivima na funkcije objekata, objekti samo određuju procedure koda koje će izvršavati tako što pronađu funkciju koja je pozvana u tablici koja odgovara tom objektu – ta karakteristika se zove dinamički poziv i po tome su objektno orijentirani programski jezici najviše različiti od proceduralnih.
+        </p>
+      </section>
+
+      <section>
+        <h3>Nasljeđivanje</h3>
+        <p>
+          Nasljeđivanje je ključan dio skoro svih objektno orijentiranih programskih jezika jer smanjuje ponavljanje koda iste funkcionalnosti. Nasljeđivanje također omogućuje polimorfizam čime je iznimno olakšana uporaba postojećeg koda.
+        </p>
+        <h5>Apstraktne klase</h5>
+        <p>
+          Klase koje sadrže funkcije čiji kod nije definiran ili varijable i konstante koje nisu inicijalizirane su apstraktne klase. Većina jezika zahtijeva da se takvi nepotpuno definirani članovi klase posebno naznače. Klase koje nasljeđuju strukturu apstraktnih klasa mogu ili također biti apstraktne klase ili definirati članove koji nisu definirani u klasi od koje nasljeđuju strukturu.
+        </p>
+        <h5>Apstraktne klase</h5>
+        <p>
+          Klase koje sadrže funkcije čiji kod nije definiran ili varijable i konstante koje nisu inicijalizirane su apstraktne klase. Većina jezika zahtijeva da se takvi nepotpuno definirani članovi klase posebno naznače. Klase koje nasljeđuju strukturu apstraktnih klasa mogu ili također biti apstraktne klase ili definirati članove koji nisu definirani u klasi od koje nasljeđuju strukturu.
+        </p>
+        <p>
+          Apstraktne klase se u pravilu ne mogu direktno instancirati iako postoje i jezici koji dozvoljavaju inicijalizaciju varijabli apstraktne klase koje nisu inicijalizirane i definiranje funkcija apstraktne klase koje su samo deklarirane.
+        </p>
+        <p>
+          Skoro svi jezici koje rade na JVMu (Java Virtual Machine) sadrže i poseban tip apstraktnih klasa koji smije sadržavati isključivo apstraktne funkcije, varijable i konstante. Takav tip apstraktnih klasa se zove sučelje (engl. Interface).
+        </p>
+        <h5>Višestruko nasljeđivanje</h5>
+        <p>
+          Neki objektni programski jezici dozvoljavaju višestruko nasljeđivanje tj. klasa može nasljeđivati svoju strukturu od više različitih klasa, apstraktnih klasa i sučelja. Ovaj pristup iznimno pojednostavljuje pisanje i strukturiranje koda ali i otežava prekoračivanje (engl. override) funkcija, varijabla ili konstanta koje su deklarirane pod istim nazivom u više klasa, apstraktnih klasa ili sučelja čiju funkcionalnost objekt nasljeđuje.
+        </p>
+      </section>
+
+      <section>
+        <h3>Polimorfizam</h3>
+        <p>
+          Polimorfizam dozvoljava definiranje funkcija, varijabli, struktura podataka i sl. koje su sposobne podržavati sve objekte čije klase hijerarhijski nasljeđuju neku zajedničku klasu. U pravilu funkcije su ograničene na pozive funkcija i varijable samo zajedničke klase, ali većina jezika također podržava i provjeravanje tipa varijable čime se unutar konteksta gdje je nametnut (engl. asserted) određen tip varijable mogu koristiti i preostale funkcije, varijable i konstante koje su specifične za klase nametnutog tipa ili klase koje nametnuti tip nasljeđuje.
+        </p>
+      </section>
+
+      <section>
+        <h3>Otvorena rekurzija</h3>
+        <p>
+          U jezicima koji podržavaju otvorenu rekurziju funkcije objekata mogu pozivati druge funkcije na istom objektu u kojem se nalaze obično korištenjem ključne riječi poput this ili self. Na taj način funkcije mogu pozivati same sebe tj. vršiti rekurziju na sebi unutar objekta.
+        </p>
+      </section>
+    </layout>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="./script/parallax.js"></script>
+    <script src="./script/layout.js"></script>
+  </body>
+</html>

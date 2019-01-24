@@ -1,0 +1,29 @@
+<div id="layout-parent">
+  <aside id="page-title">
+    <div id="sidebar-title">
+      <p>Izbornik</p>
+      <div id="menu-button" onclick="toggleHeader()" >
+        <div id="bar0"></div>
+        <div id="bar1"></div>
+        <div id="bar2"></div>
+      </div>
+    </div>
+    <h1>Stari dizajn</h1>
+  </aside>
+  <aside id="sidebar">
+    <ul id="sidebar-nav"></ul>
+  </aside>
+  <main>
+    <div id="content"></div>
+  </main>
+</div>
+
+<footer>
+  <p>Copyright &copy; 2019. Tin Švagelj</p>
+</footer>
+
+<script type="text/javascript">
+  function toggleHeader() {
+    document.getElementById('layout-parent').classList.toggle("open");
+  }
+</script>

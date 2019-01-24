@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Tin Svagelj">
+
+    <title>OOP - Objekti i klase</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/layout.css">
+
+    <style>
+      #content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      #content p {
+        text-align: justify;
+        text-indent: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <layout src="part/layout.html" title="Objekti i klase" menu="part/menu.html">
+      <section>
+        <p>
+          Skoro svi objektno orijentirani programski jezici koriste objekte i
+          klase u nekom obliku. Osim klasa, neki jezici koriste i direktno
+          instanciranje objekata i/ili prototipe.
+        </p>
+
+        <p>
+          Svi objekti u stvarnom svijetu dijele dvije karakteristike: Svi imaju
+          određeno stanje i ponašanje. Npr. osoba ima karakteristike poput
+          imena, prezimena, oib-a, najdražu boju, itd. te ponašanja poput
+          spavanja, hranjenja, pjevanja i sl. Objekti u objektno orijentiranim
+          programskim jezicima na isti način imaju stanja i ponašanja tj.
+          varijable i/ili konstante i funkcije.
+        </p>
+      </section>
+
+      <section>
+        <h3>Klase</h3>
+        <p>
+          Klase su predlošci koji sadrže strukturu koja se koristi pri izradi
+          objekata. Klase dozvoljavaju nasljeđivanje što pojednostavljuje
+          ponovnu uporabu koda i olakšava strukturiranje programa gdje su
+          podatci s kojima se radi imaju neznatnije razlike.
+        </p>
+      </section>
+
+      <section>
+        <h3>Objekti</h3>
+        <p>
+          Objekti su pretežno instance klasa. Neki objektno orijentirani
+          programski jezici poput Scale i Kotlina dozvoljavaju direktno
+          stvaranje objekata. Za prethodnu funkcionalnost se u Javi koriste
+          singleton klase koje su karakteristične po tome što imaju privatan
+          konstruktor kojem je moguće pristupiti samo direktno iz njegove klase
+          i jednu javnu, statičnu varijablu dostupnu kroz statičnu funkciju koja
+          pohranjuje jednu instancu/objekt klase koju predstavlja.
+        </p>
+
+        <p>
+          U C++u se objekti pohranjuju privremeno u kontekstu izrade na stog
+          (engl. stack) s kojeg se miču nakon uporabe, te ukoliko im se pristupa
+          uporabom pokazivača (engl. pointers) se njihovi podatci trajno
+          pohranjuju na hrpu (engl. heap). Većina drugih objektnih programskih
+          jezika pohranjuje objekte trajno i pomoću referenci prate treba li ih
+          ukloniti iz memorije.
+        </p>
+      </section>
+
+      <section>
+        <h3>Povezani termini</h3>
+        <p>
+          Funkcije koje pripadaju objektima se često na engleskom jeziku
+          učestalo oslovljavaju i nazivom „method”. Za varijable se koriste i
+          engleski nazivi „field” (hrv. polje; nepovezano s poljima za koja se
+          koristi engl. naziv „array”), „member” (hrv. član), „attribute”
+          (hrv. atribut) i „property” (hrv. karakteristika).
+        </p>
+
+        <p>
+          Iz prethodnih izraza proizlaze sljedeći termini:
+          <ul>
+            <li>
+              Varijable klasa (engl. class variables) pripadaju klasama i logički predstavljaju tipove podataka koji pripadaju određenoj klasi,
+            </li>
+            <li>
+              Varijable instanca/objekata (engl. instance variables) pripadaju odgovarajućim objektima i logički predstavljaju podatke koji su sadržani u instanciranim objektima neke klase,
+            </li>
+            <li>
+              Varijable članova (engl. member variables) je pojam koji se odnosi na varijable koje pripadaju i klasama i objektima,
+            </li>
+            <li>
+              Funkcije klasa tj. statičke funkcije (engl. static/class methods) se odnosi na funkcije koje logički pripadaju određenoj klasi i mogu se pozivati iz te klase bez prethodne inicijalizacije.
+            </li>
+            <li>
+              Funkcije instanca/objekata (engl. instance methods) pripadaju individualnim objektima i imaju pristup specifičnim varijablama koje pripadaju objektu nad kojim se pozivaju.
+            </li>
+          </ul>
+        </p>
+      </section>
+    </layout>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="./script/parallax.js"></script>
+    <script src="./script/layout.js"></script>
+  </body>
+</html>

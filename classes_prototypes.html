@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Tin Svagelj">
+
+    <title>OOP - Usporedba klasa i prototipa</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/layout.css">
+
+    <style>
+      #content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      #content p {
+        text-align: justify;
+        text-indent: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <layout src="part/layout.html" title="Usporedba klasa i prototipa" menu="part/menu.html">
+      <section>
+        <p>
+          U jezicima koji koriste klase se klase definiraju prije rada s objektima, a objekti se instanciraju koristeći željene klase. Ako su dva objekta instancirana koristeći istu klasu, ta dva objekta u pravilu imaju identične varijable, konstante i funkcije te ih se može koristiti uporabom istog koda. Neki od popularnijih jezika koji koriste klase su: Java, C++, Python, C#, ...
+        </p>
+
+        <p>
+          U jezicima koji koriste prototipe klase ne postoje te se objekti direktno konstruiraju. Neki objekt se također može instancirati koristeći drugi objekt kao prototip pri čemu on nasljeđuje sve varijable, konstante i funkcije koje su deklarirane u originalnom objektu. Jezici koji koriste prototipe su obično jednostavniji za koristiti od jezika koji koriste klase ali su  ujedno i manje sigurni. Primjeri jezika koji koriste prototipe su: JavaScript (i ostale ECMAScript implementacije), Lua, Io, ..,
+        </p>
+
+        <h3>Klasa (Kotlin)</h3>
+        <pre class="prettyprint linenums"><code>class Pas(val boja: Boja = Boja.Crna) {
+  var godine = 0
+
+  fun ostari(brGodina: Int) {
+    godine += brGodina
+  }
+}
+
+object GlavnaKlasa {
+  fun main(argumenti: Array<String>) {
+    val Madogga = Pas()
+    Madogga.ostari(2)
+  }
+}</code></pre>
+
+        <h3>Prototip (JavaScript)</h3>
+        <pre class="prettyprint linenums"><code>var pas = {boja: "Crna", godine: 0}
+
+var madogga = Object.create(pas);
+madogga.godine += 1;
+
+madogga.boja; // "Crna"
+madogga.godine; // 1</code></pre>
+      </section>
+
+
+    </layout>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="./script/parallax.js"></script>
+    <script src="./script/layout.js"></script>
+
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style/code.css">
+  </body>
+</html>
