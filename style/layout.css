@@ -4,12 +4,11 @@
   margin-right: auto;
 }
 
-#layout-parent main header {
+#layout-parent main header h1 {
+  display: block;
   min-height: 50px;
   background: #262626;
-}
-
-#layout-parent main header h1 {
+  margin-bottom: 0;
   font-size: 35px;
   text-indent: 60px;
 }
@@ -33,6 +32,7 @@
   padding: 3px;
   margin: 0;
   list-style: none;
+  overflow: hidden;
 }
 
 #horizontal-nav li {
@@ -59,6 +59,37 @@
 
 #horizontal-nav li a:active, #horizontal-nav li a:focus {
   text-decoration: none;
+}
+
+#horizontal-nav li .description {
+  display: block;
+  position: absolute;
+  height: auto;
+  width: 300px;
+  margin-top: 5px;
+  margin-left: -100px;
+  padding: 2px;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  background: #222222;
+  border: 1px solid #ff9900;
+
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#horizontal-nav li .description p {
+  color: #ff9900;
+  line-height: 20px;
+  margin: 0;
+}
+
+#horizontal-nav li:hover .description {
+  opacity: 1;
+  visibility: visible;
 }
 
 #sidebar {
@@ -137,7 +168,6 @@
   cursor: auto;
 }
 
-
 #vertical-nav li {
   text-indent: 10px;
   line-height: 40px;
@@ -153,8 +183,8 @@
   display: block;
   margin: 0;
   text-decoration: none;
-  background-color: #ffd89f;
-  color: #262626;
+  background-color: #3c3c3c;
+  color: #fff;
 }
 
 #vertical-nav li a:hover {
@@ -171,7 +201,7 @@
   width: 300px;
   padding: 0;
   margin: 0;
-  border-left: 5px solid #ffd89f;
+  border-left: 5px solid #3c3c3c;
   list-style: none;
 }
 
@@ -202,6 +232,25 @@
     text-align: center;
   }
 
+  #horizontal-nav li .description {
+    height: 0;
+    width: 0;
+    right: 2px;
+    opacity: 1;
+    visibility: hidden;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  #horizontal-nav li:hover .description {
+    height: auto;
+    width: 300px;
+    visibility: visible;
+  }
+
   #sidebar {
     margin-left: -300px;
   }
@@ -212,10 +261,19 @@
     width: 100%;
   }
 
+  #vertical-nav ul {
+    width: 100%;
+  }
+
   #menu-button {
     position: absolute;
     top: 0;
     left: 0;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 
   #layout-parent.menu #menu-button {
@@ -225,5 +283,10 @@
   #vertical-nav {
     background: url('images/empty.png');
     padding-top: 50px;
+
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 }
