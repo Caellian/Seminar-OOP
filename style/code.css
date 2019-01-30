@@ -1,74 +1,68 @@
-/*
- * Derived from einaros's Sons of Obsidian theme at
- * http://studiostyl.es/schemes/son-of-obsidian by
- * Alex Ford of CodeTunnel:
- * http://CodeTunnel.com/blog/post/71/google-code-prettify-obsidian-theme
- */
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 
-.str
-{
-    color: #EC7600;
+.str {
+  color: #789865;
 }
-.kwd
-{
-    color: #93C763;
+
+.kwd {
+  font-weight: 510;
+  color: #cb6d1d;
 }
-.com
-{
-    color: #66747B;
+
+.com {
+  color: #85957b;
+  font-style: italic;
 }
-.typ
-{
-    color: #678CB1;
+
+.typ {
+  color: #cb6d1d;
 }
-.lit
-{
-    color: #FACD22;
+
+.lit {
+  color: #6896ba;
 }
-.pun
-{
-    color: #F1F2F3;
+
+.pun {
+  color: #e0c46c;
 }
-.pln
-{
-    color: #F1F2F3;
+
+.pln {
+  color: #eee;
 }
-.tag
-{
-    color: #8AC763;
+
+.tag {
+  color: #8AC763;
 }
-.atn
-{
-    color: #E0E2E4;
+
+pre.prettyprint {
+  border-radius: 5px;
+  border: 1px solid #888;
 }
-.atv
-{
-    color: #EC7600;
-}
-.dec
-{
-    color: purple;
-}
-pre.prettyprint
-{
-    border: 0px solid #888;
-}
-ol.linenums
-{
+
+ol.linenums {
     margin-top: 0;
     margin-bottom: 0;
 }
 .prettyprint {
-    background: #000;
+    background: #212121;
 }
-li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9
-{
-    color: #555;
-    list-style-type: decimal;
+
+li.L0,li.L1,li.L2,li.L3,li.L4,li.L5,li.L6,li.L7,li.L8,li.L9 {
+    background: #1b1b1b;
+    color: #bababa;
+    border-left: 1px solid #888;
+    list-style-type: decimal-leading-zero;
+    padding-left: 10px;
 }
-li.L1, li.L3, li.L5, li.L7, li.L9 {
-    background: #111;
+
+li.L1,li.L3,li.L5,li.L7,li.L9 {
+    background: #171717;
 }
+
+.linenums li code {
+  font-family: "Fira Code";
+}
+
 @media print
 {
     .str

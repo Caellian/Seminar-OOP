@@ -1,9 +1,8 @@
 function handleParallaxTag() {
   $('parallax').each(function() {
-    var handled = $(this).attr('handled');
     var src = $(this).attr('src');
 
-    if (typeof src !== 'undefined' && (typeof handled === 'undefined' || handled === 'true')) {
+    if (typeof src !== 'undefined') {
       $(this).css({'background-image': 'url(' + $(this).attr('src') + ')',
                 'background-attachment': 'fixed',
                 'background-position': 'center',
@@ -23,8 +22,6 @@ function handleParallaxTag() {
         $(this).css('width', width);
       }
     }
-
-    $(this).attr('handled', 'true');
   });
 }
 

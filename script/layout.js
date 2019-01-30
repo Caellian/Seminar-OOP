@@ -1,35 +1,38 @@
 function handleLayoutTag() {
   $('layout').each(function() {
-    var handled = $(this).attr('handled');
     var src = $(this).attr('src');
 
     var content = $(this).clone().html();
     $(this).empty();
 
-    if (typeof src !== 'undefined' && (typeof handled === 'undefined' || handled === 'true')) {
+    if (typeof src !== 'undefined') {
       $(this).load(src, function() {
+        $(this).replaceWith($(this).html());
+
         var title = $(this).attr('title');
-        var menu = $(this).attr('menu');
-        var sidebar = $(this).attr('sidebar');
+        var vertical = $(this).attr('vertical');
+        var horizontal = $(this).attr('horizontal');
 
         if (typeof title !== 'undefined') {
-          $(this).find('main header h1').append(title);
+          $('#page-title').append(title);
         }
 
-        if (typeof menu !== 'undefined') {
-          $(this).find('#horizontal-nav').load(menu);
+        if (typeof horizontal !== 'undefined') {
+          $('#horizontal-nav').load(horizontal);
         }
 
-        if (typeof sidebar !== 'undefined') {
-          $(this).find('#vertical-nav').load(sidebar);
+        if (typeof vertical !== 'undefined') {
+          $('#vertical-nav').load(vertical);
         }
 
         $('#content').html(content);
       });
     }
-
-    $(this).attr('handled', 'true');
   });
+}
+
+function toggleMenu() {
+  document.getElementById('layout-parent').classList.toggle("menu");
 }
 
 $(document).ready(handleLayoutTag);
